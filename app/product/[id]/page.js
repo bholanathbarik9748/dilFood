@@ -1,12 +1,14 @@
-import Productpage from '@/src/pages/productPage/Productpage'
-import React from 'react'
+import Productpage from "@/src/pages/productPage/Productpage";
+import React from "react";
 
-const page = () => {
+const page = ({ params }) => {
+  const { id } = params;
+
   return (
     <>
-      <Productpage />
+      <Productpage id={id} />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

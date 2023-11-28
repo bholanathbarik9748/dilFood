@@ -8,7 +8,6 @@ import Navbar from "@/src/components/Navbar/Navbar";
 const Productpage = ({ id }) => {
   const product = products.find((p) => p.id === parseInt(id));
 
-  console.log("Productpage", product);
   if (!product) {
     return <p>Product not found</p>;
   }
@@ -18,7 +17,7 @@ const Productpage = ({ id }) => {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <div className="flex-grow">
-          <ProductInfo product={product} />
+          <ProductInfo product={product} id={id} />
         </div>
         <Footer />
       </div>
